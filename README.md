@@ -2,7 +2,7 @@
 
 This project was bootstrapped with Create React App.
 
-### `npm i`
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode
