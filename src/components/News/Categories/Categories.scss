@@ -1,0 +1,41 @@
+.tab {
+
+  &__item {
+    color: #4A4A4F;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 40px;
+    cursor: pointer;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+  }
+
+  &__active {
+    padding-bottom: 17px;
+    border-bottom: 2px solid #2244CC;
+    color: #323237;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab {
+    &__item {
+      margin: 0 20px;
+      font-size: 18px;
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .tab {
+    &__item {
+      margin: 0 6px;
+    }
+  }
+}

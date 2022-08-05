@@ -1,0 +1,136 @@
+// swiper start
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgb(255, 255, 255);
+  background-image: url("../../../../src/assets/images/Vector.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 44px !important;
+  height: 44px !important;
+  margin-right: -32px;
+  border: none;
+
+  &:after {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  transform: rotate(180deg);
+  margin-left: -32px;
+}
+
+.swiper-button-disabled {
+  //opacity: 1 !important;
+  // could have been enabled to match the layout (button is not fading after the end of scrolling elements)
+  // but we have to give user a feedback of any possible actions
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  height: 4px !important;
+  width: 16px !important;
+  border-radius: unset !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 24px !important;
+  transition: width 0.25s ease-out;
+}
+
+//swiper end
+
+.hover {
+  overflow-y: auto;
+
+  img {
+    display: none;
+  }
+}
+
+.article {
+  &__wrapper {
+    position: relative;
+  }
+
+  &__item {
+    height: 472px !important; // because of Swiper
+    width: 320px !important;
+    margin-right: 16px;
+    overflow: hidden;
+    border: 1px solid #E1E1E6;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 70%);
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 75px;
+    }
+  }
+
+  &__image {
+    width: 320px;
+    height: 320px;
+  }
+
+  &__desc {
+    font-weight: 400;
+    line-height: 24px;
+    padding: 26px 32px;
+    color: #4A4A4F;
+    margin: 0 auto;
+  }
+
+  &__hashtags-wrapper {
+    padding-left: 32px;
+    padding-right: 48px;
+  }
+
+  &__hashtags {
+    color: #2244CC;
+    word-break: break-word;
+    line-height: 24px;
+  }
+}
+
+.no-data {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+  .swiper-pagination {
+    display: block;
+  }
+  .article {
+    &__item {
+      margin-right: 40px !important; // to match the layout
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .article {
+    &__item {
+      width: 250px !important;
+      margin-right: 16px !important;
+
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+}
